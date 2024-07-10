@@ -34,7 +34,7 @@
               <!-- Mobile menu button-->
               <button
                 type="button"
-                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -57,7 +57,7 @@
                 </svg>
                 <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
                 <svg
-                  class="hidden h-6 w-6"
+                  class="hidden h-6 w-6 z-40"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
@@ -86,35 +86,80 @@
                 class="hidden sm:ml-6 md:flex md:justify-between md:w-full md:items-center"
               >
                 <div class="flex space-x-4">
-                  <a
+                  <button
                     href="#"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-white"
+                    class="product-btn rounded-md px-3 py-2 text-sm font-medium text-white relative"
                     aria-current="page"
-                    >Product</a
                   >
-                  <a
+                    <img
+                      class="absolute right-0 top-1/2 transform -translate-y-1/2 block"
+                      src="/images/icon-arrow-light.svg"
+                      alt="arrowdown"
+                    />
+                    Product
+                    <ul
+                      class="product-list hidden z-50 absolute rounded-lg bg-white text-start text-black text-xs p-2 space-y-3"
+                    >
+                      <li>Overview</li>
+                      <li>Pricing</li>
+                      <li>Marketplace</li>
+                      <li>Features</li>
+                      <li>Integrations</li>
+                    </ul>
+                  </button>
+
+                  <button
                     href="#"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >Company</a
+                    class="company-btn rounded-md px-3 py-2 text-sm font-medium text-white relative"
+                    aria-current="page"
                   >
-                  <a
+                    <img
+                      class="absolute right-0 top-1/2 transform -translate-y-1/2 block"
+                      src="/images/icon-arrow-light.svg"
+                      alt="arrowdown"
+                    />
+                    Company
+                    <ul
+                      class="company-list hidden z-50 absolute rounded-lg bg-white text-start text-black text-xs p-2 space-y-3"
+                    >
+                      <li>About</li>
+                      <li>Team</li>
+                      <li>Blog</li>
+                      <li>Careers</li>
+                    </ul>
+                  </button>
+                  <button
                     href="#"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >Connect</a
+                    class="connect-btn rounded-md px-3 py-2 text-sm font-medium text-white relative"
+                    aria-current="page"
                   >
+                    <img
+                      class="absolute right-0 top-1/2 transform -translate-y-1/2 block"
+                      src="/images/icon-arrow-light.svg"
+                      alt="arrowdown"
+                    />
+                    Connect
+                    <ul
+                      class="connect-list hidden z-50 absolute rounded-lg bg-white text-start text-black text-xs p-2 space-y-3"
+                    >
+                      <li>Contact</li>
+                      <li>Newsletter</li>
+                      <li>LinkedIn</li>
+                    </ul>
+                  </button>
                 </div>
                 <div
                   class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 md:gap-3"
                 >
                   <button
                     type="button"
-                    class="relative rounded-full p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    class="relative rounded-full p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                   >
                     Login
                   </button>
                   <button
                     type="button"
-                    class="relative rounded-full bg-white py-1 px-3 text-1-Light-red-CTA-text font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    class="relative rounded-full bg-white py-1 px-3 text-1-Light-red-CTA-text font-semibold hover:bg-2-Very-light-red-CTA-hover-background hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                   >
                     Sign Up
                   </button>
@@ -124,30 +169,81 @@
           </div>
         </div>
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden hidden" id="mobile-menu">
-          <div class="space-y-1 px-2 pb-3 pt-2">
-            <a
+        <div class="sm:hidden hidden z-50 flex p-5" id="mobile-menu">
+          <div
+            class="rounded-xl space-y-1 px-2 pb-3 pt-2 z-40 bg-white w-full text-black flex flex-col items-center"
+          >
+            <button
               href="#"
-              class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              class="product-btn rounded-md px-3 py-2 text-sm font-medium relative"
               aria-current="page"
-              >Product</a
             >
-            <a
+              <img
+                class="right-0 top-0 transform translate-y-4 block absolute"
+                src="/images/icon-arrow-dark.svg"
+                alt="arrowdown"
+              />
+              Product
+              <ul
+                class="product-list hidden z-50 rounded-lg bg-white text-center text-black text-xs p-2 space-y-3"
+              >
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
+            </button>
+
+            <button
               href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >Company</a
+              class="company-btn rounded-md px-3 py-2 text-sm font-medium relative"
+              aria-current="page"
             >
-            <a
+              <img
+                class="right-0 top-0 transform translate-y-4 block absolute"
+                src="/images/icon-arrow-dark.svg"
+                alt="arrowdown"
+              />
+              Company
+              <ul
+                class="company-list hidden z-50 rounded-lg bg-white text-center text-black text-xs p-2 space-y-3"
+              >
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </button>
+            <button
               href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >Connect</a
+              class="connect-btn rounded-md px-3 py-2 text-sm font-medium relative"
+              aria-current="page"
             >
-            <a
-              href="#"
-              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              <img
+                class="right-0 top-0 transform translate-y-4 block absolute"
+                src="/images/icon-arrow-dark.svg"
+                alt="arrowdown"
+              />
+              Connect
+              <ul
+                class="text-center connect-list hidden z-50 rounded-lg bg-white text-black text-xs p-2 space-y-3"
+              >
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </button>
+            <hr class="w-52 border-gray-400" />
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium"
               >Login</a
             >
-            <button>Sign Up</button>
+            <button
+              type="button"
+              class="relative rounded-full bg-1-Light-red-CTA-text py-1 px-3 text-white font-semibold hover:bg-2-Very-light-red-CTA-hover-background hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+            >
+              Sign Up
+            </button>
           </div>
         </div>
       </nav>
@@ -162,7 +258,9 @@
           </p>
         </div>
         <div class="text-sm z-20">
-          <button class="bg-white p-2 text-1-Light-red-CTA-text rounded-full">
+          <button
+            class="bg-white p-2 text-1-Light-red-CTA-text hover:text-white hover:bg-2-Very-light-red-CTA-hover-background rounded-full"
+          >
             Start for Free
           </button>
           <button class="p-2 border-2 rounded-full">Learn More</button>
@@ -170,17 +268,23 @@
       </div>
     </div>
 
-    <div class="text-center flex flex-col gap-5 py-16 px-8">
-      <h1 class="text-xl">Designed for the future</h1>
-      <div class="grid grid-rows-2 md:grid-cols-2 border-4 md:items-center">
-        <div class="md:col-auto md:order-2 md:relative border-4">
+    <div
+      class="text-center flex flex-col gap-5 py-16 px-8 md:px-0 md:items-center"
+    >
+      <h1 class="text-xl text-3-Very-dark-blue-headings">
+        Designed for the future
+      </h1>
+      <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div class="md:col-auto md:order-2 flex flex-col items-center">
           <div
-            class="bg-editor-mobile md:bg-cover bg-contain bg-no-repeat h-full w-full md:h-72 md:w-80 md:right-20 md:self-center md:absolute md:bg-editor-desktop md:scale-[200%]"
+            class="bg-editor-mobile bg-contain bg-no-repeat h-72 w-80 md:mx-auto md:scale-150"
           ></div>
         </div>
-        <div class="flex flex-col gap-5 md:col-auto">
-          <h1 class="text-xl">Introducing an extensible editor</h1>
-          <p class="text-xs leading-relaxed">
+        <div class="flex flex-col gap-5 md:col-auto md:pl-28">
+          <h1 class="text-xl text-3-Very-dark-blue-headings md:text-start">
+            Introducing an extensible editor
+          </h1>
+          <p class="text-xs leading-relaxed md:text-start">
             Blogr features an exceedingly intuitive interface which lets you
             focus on one thing: creating content. The editor supports management
             of multiple blogs and allows easy manipulation of embeds such as
@@ -188,8 +292,10 @@
             provide easy ways to add functionality or change the looks of a
             blog.
           </p>
-          <h1 class="text-xl">Robust content management</h1>
-          <p class="text-xs leading-relaxed">
+          <h1 class="text-xl text-3-Very-dark-blue-headings md:text-start">
+            Robust content management
+          </h1>
+          <p class="text-xs leading-relaxed md:text-start">
             Flexible content management enables users to easily move through
             posts. Increase the usability of your blog by adding customized
             categories, sections, format, or flow. With this functionality,
@@ -218,10 +324,12 @@
         class="md:h-72 relative bg-slate-900 rounded-tr-[25%] rounded-bl-[25%] h-96 text-white text-center font-light -translate-y-96 md:-translate-y-0"
       >
         <div
-          class="flex flex-col items-center justify-between pt-24 gap-5 px-8 md:pt-0"
+          class="flex flex-col items-center md:items-start justify-between pt-24 gap-5 px-8 md:pt-0"
         >
-          <h1 class="text-3xl mt-16">State of the Art Infrastructure</h1>
-          <p class="text-xs leading-relaxed">
+          <h1 class="text-3xl mt-16 md:text-start">
+            State of the Art Infrastructure
+          </h1>
+          <p class="text-xs leading-relaxed md:text-start">
             With reliability and speed in mind, worldwide data centers provide
             the backbone for ultra-fast connectivity. This ensures your site
             will load instantly, no matter where your readers are, keeping your
@@ -231,12 +339,14 @@
       </div>
     </div>
 
-    <div class="text-center md:flex md:items-center">
+    <div class="text-center md:flex md:items-center md:py-16 md:pr-28 md:pl-20">
       <img src="/images/illustration-laptop-mobile.svg" alt="laptop" />
       <div class="flex flex-col gap-5 p-8">
         <div class="space-y-5">
-          <h1 class="text-xl">Free, open, simple</h1>
-          <p class="text-xs leading-relaxed">
+          <h1 class="text-xl text-3-Very-dark-blue-headings md:text-start">
+            Free, open, simple
+          </h1>
+          <p class="text-xs leading-relaxed md:text-start">
             Blogr is a free and open source application backed by a large
             community of helpful developers. It supports features such as code
             syntax highlighting, RSS feeds, social media integration,
@@ -246,8 +356,10 @@
           </p>
         </div>
         <div class="space-y-5">
-          <h1 class="text-xl">Powerful tooling</h1>
-          <p class="text-xs leading-relaxed">
+          <h1 class="text-xl text-3-Very-dark-blue-headings md:text-start">
+            Powerful tooling
+          </h1>
+          <p class="text-xs leading-relaxed md:text-start">
             Batteries included. We built a simple and straightforward CLI tool
             that makes customization and deployment a breeze, but capable of
             producing even the most complicated sites.
