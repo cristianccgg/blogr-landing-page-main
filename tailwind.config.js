@@ -18,6 +18,8 @@ module.exports = {
       backgroundImage: {
         "small-bg": "url('/images/bg-pattern-intro-mobile.svg')",
         "desktop-bg": "url('/images/bg-pattern-intro-desktop.svg')",
+        "editor-mobile": "url('/images/illustration-editor-mobile.svg')",
+        "editor-desktop": "url('/images/illustration-editor-desktop.svg')",
       },
     },
   },

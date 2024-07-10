@@ -17,12 +17,14 @@
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
-    <div class="bg-1-Light-red-CTA-text relative rounded-bl-[25%]">
-      <div class="absolute inset-0 flex items-center justify-center">
+    <div
+      class="relative rounded-bl-[25%] bg-1-Light-red-CTA-text overflow-hidden md:rounded-bl-[65px]"
+    >
+      <div class="absolute inset-0 overflow-hidden">
         <img
           src="/images/bg-pattern-intro-mobile.svg"
           alt="Pattern"
-          class="pattern"
+          class="w-full h-full object-fill scale-[350%] md:scale-[550%]"
         />
       </div>
       <nav>
@@ -71,7 +73,7 @@
               </button>
             </div>
             <div
-              class="flex flex-1 items-start justify-between sm:items-stretch sm:justify-start px-5"
+              class="flex flex-1 items-start justify-between md:items-center md:justify-start px-5"
             >
               <div class="flex flex-shrink-0 items-start">
                 <img
@@ -80,11 +82,13 @@
                   alt="Your Company"
                 />
               </div>
-              <div class="hidden sm:ml-6 sm:block">
+              <div
+                class="hidden sm:ml-6 md:flex md:justify-between md:w-full md:items-center"
+              >
                 <div class="flex space-x-4">
                   <a
                     href="#"
-                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-white"
                     aria-current="page"
                     >Product</a
                   >
@@ -100,17 +104,17 @@
                   >
                 </div>
                 <div
-                  class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+                  class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 md:gap-3"
                 >
                   <button
                     type="button"
-                    class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    class="relative rounded-full p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     Login
                   </button>
                   <button
                     type="button"
-                    class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    class="relative rounded-full bg-white py-1 px-3 text-1-Light-red-CTA-text font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     Sign Up
                   </button>
@@ -152,8 +156,10 @@
         class="flex flex-col items-center gap-10 justify-evenly text-white px-5 py-16 h-full"
       >
         <div class="z-20 text-center font-light space-y-10">
-          <h1 class="text-3xl">A modern publishing platform</h1>
-          <p class="text-xs">Grow your audience and build your online brand</p>
+          <h1 class="text-3xl md:text-6xl">A modern publishing platform</h1>
+          <p class="text-xs md:text-lg">
+            Grow your audience and build your online brand
+          </p>
         </div>
         <div class="text-sm z-20">
           <button class="bg-white p-2 text-1-Light-red-CTA-text rounded-full">
@@ -166,24 +172,35 @@
 
     <div class="text-center flex flex-col gap-5 py-16 px-8">
       <h1 class="text-xl">Designed for the future</h1>
-      <img src="/images/illustration-editor-mobile.svg" alt="editor" class="" />
-      <h1 class="text-xl">Introducing an extensible editor</h1>
-      <p class="text-xs leading-relaxed">
-        Blogr features an exceedingly intuitive interface which lets you focus
-        on one thing: creating content. The editor supports management of
-        multiple blogs and allows easy manipulation of embeds such as images,
-        videos, and Markdown. Extensibility with plugins and themes provide easy
-        ways to add functionality or change the looks of a blog.
-      </p>
-      <h1 class="text-xl">Robust content management</h1>
-      <p class="text-xs leading-relaxed">
-        Flexible content management enables users to easily move through posts.
-        Increase the usability of your blog by adding customized categories,
-        sections, format, or flow. With this functionality, you’re in full
-        control.
-      </p>
+      <div class="grid grid-rows-2 md:grid-cols-2 border-4 md:items-center">
+        <div class="md:col-auto md:order-2 md:relative border-4">
+          <div
+            class="bg-editor-mobile md:bg-cover bg-contain bg-no-repeat h-full w-full md:h-72 md:w-80 md:right-20 md:self-center md:absolute md:bg-editor-desktop md:scale-[200%]"
+          ></div>
+        </div>
+        <div class="flex flex-col gap-5 md:col-auto">
+          <h1 class="text-xl">Introducing an extensible editor</h1>
+          <p class="text-xs leading-relaxed">
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports management
+            of multiple blogs and allows easy manipulation of embeds such as
+            images, videos, and Markdown. Extensibility with plugins and themes
+            provide easy ways to add functionality or change the looks of a
+            blog.
+          </p>
+          <h1 class="text-xl">Robust content management</h1>
+          <p class="text-xs leading-relaxed">
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="relative mt-40 h-96">
+    <div
+      class="relative mt-40 md:my-5 h-96 md:h-72 md:bg-slate-900 rounded-bl-[65px] rounded-tr-[65px] md:grid md:grid-cols-2"
+    >
       <div class="z-10 overflow-hidden relative h-96 w-96">
         <img
           class="w-full h-full bg-no-repeat bg-contain absolute inset-0 left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2"
@@ -192,16 +209,16 @@
         />
       </div>
       <img
-        class="z-20 absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-80"
+        class="z-20 absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-80 md:-translate-y-10 md:-translate-x-0 md:left-24 md:w-96"
         src="/images/illustration-phones.svg"
         alt="phones"
       />
 
       <div
-        class="relative bg-slate-900 rounded-tr-[25%] rounded-bl-[25%] h-96 text-white text-center font-light -translate-y-96"
+        class="md:h-72 relative bg-slate-900 rounded-tr-[25%] rounded-bl-[25%] h-96 text-white text-center font-light -translate-y-96 md:-translate-y-0"
       >
         <div
-          class="flex flex-col items-center justify-between pt-24 gap-5 px-8"
+          class="flex flex-col items-center justify-between pt-24 gap-5 px-8 md:pt-0"
         >
           <h1 class="text-3xl mt-16">State of the Art Infrastructure</h1>
           <p class="text-xs leading-relaxed">
@@ -214,7 +231,7 @@
       </div>
     </div>
 
-    <div class="text-center">
+    <div class="text-center md:flex md:items-center">
       <img src="/images/illustration-laptop-mobile.svg" alt="laptop" />
       <div class="flex flex-col gap-5 p-8">
         <div class="space-y-5">
@@ -239,7 +256,7 @@
       </div>
     </div>
     <footer
-      class="bg-7-Very-dark-black-blue-footer-background rounded-tr-[25%] text-center text-xs font-extralight text-white flex flex-col items-center justify-evenly py-10 gap-5"
+      class="md:flex-row bg-7-Very-dark-black-blue-footer-background rounded-tr-[25%] text-center text-xs font-extralight text-white flex flex-col items-center justify-evenly py-10 gap-5"
     >
       <div>
         <img src="/images/logo.svg" alt="logo" />
